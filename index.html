@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Volunteers</h1>
+  <ul>
+    {% for volunteer in site.data.volunteers %}
+    <li>
+      {% if volunteer.website == null %}
+        {{ volunteer.name }}
+      {% else %}
+        <a href="https://github.com/{{ member.github }}">
+        {{ volunteer.name }}
+        </a>
+      {% endif %}
+      {{ volunteer.position }}
+      {{ volunteer.about }}
+      can talk about: {{ volunteer.topics }}
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
