@@ -3,15 +3,15 @@ layout: default
 ---
 
 <div class="home">
-
+  {% include info.html %}
   <h1 class="page-heading">Volunteers</h1>
   <ul>
     {% for volunteer in site.data.volunteers %}
     <li>
-      {% if volunteer.website == null %}
+      {% if volunteer.website == 'NA' %}
         {{ volunteer.name }}
       {% else %}
-        <a href="https://github.com/{{ member.github }}">
+        <a href="{{ volunteer.website }}">
         {{ volunteer.name }}
         </a>
       {% endif %}
@@ -21,6 +21,4 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
