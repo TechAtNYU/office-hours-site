@@ -69,15 +69,6 @@ ul, ol {
     margin-left: $spacing-unit;
 }
 
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
-}
-
-
-
 /**
  * Headings
  */
@@ -85,26 +76,32 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
+h4 {
+    font-size: $base-font-size * 1.6;
+}
+
+h3 {
+    font-size: $base-font-size * 1.5;
+    font-weight: bold; 
+    text-decoration: underline;
+    font-weight: 600;
+}
 
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: white;
     text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
     &:hover {
-        color: $text-color;
         text-decoration: underline;
     }
 }
 
-
+li {
+    list-style: none;
+}
 
 /**
  * Blockquotes

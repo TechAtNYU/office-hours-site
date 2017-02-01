@@ -11,9 +11,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fdfdfd;
+  font: 400 16px/1.5 "Inconsolata", sans-serif;
+  color: #FFFFFF;
+  background-color: #D7552D;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -52,34 +52,39 @@ figcaption {
 ul, ol {
   margin-left: 30px; }
 
-li > ul,
-li > ol {
-  margin-bottom: 0; }
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
+h4 {
+  font-size: 25.6px; }
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-weight: 600; }
+
 /**
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: white;
   text-decoration: none; }
-  a:visited {
-    color: #1756a9; }
   a:hover {
-    color: #111;
     text-decoration: underline; }
+
+li {
+  list-style: none; }
 
 /**
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: #EEEEEE;
+  border-left: 4px solid white;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -93,7 +98,7 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid white;
   border-radius: 3px;
   background-color: #eef; }
 
@@ -142,77 +147,30 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: #EEEEEE; }
 
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid white;
   min-height: 56px;
   position: relative; }
+  .site-header .wrapper {
+    margin-top: 50px; }
 
 .site-title {
-  font-size: 26px;
   font-weight: 300;
   line-height: 56px;
   letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left; }
-  .site-title, .site-title:visited {
-    color: #424242; }
-
-.site-nav {
-  float: right;
-  line-height: 56px; }
-  .site-nav .menu-icon {
-    display: none; }
-  .site-nav .page-link {
-    color: #111;
-    line-height: 1.5; }
-    .site-nav .page-link:not(:last-child) {
-      margin-right: 20px; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 15px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px;
-        margin-left: 20px; }
-        .site-nav .page-link:not(:last-child) {
-          margin-right: 0; } }
+  color: #ffffff;
+  font-size: 48px; }
 
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #ffffff;
   padding: 30px 0; }
 
 .footer-heading {
@@ -226,7 +184,7 @@ pre {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #828282;
+  color: #EEEEEE;
   margin-left: -15px; }
 
 .footer-col {
@@ -266,9 +224,6 @@ pre {
 .page-content {
   padding: 30px 0; }
 
-.page-heading {
-  font-size: 20px; }
-
 .post-list {
   margin-left: 0;
   list-style: none; }
@@ -277,11 +232,14 @@ pre {
 
 .post-meta {
   font-size: 14px;
-  color: #828282; }
+  color: #EEEEEE; }
 
 .post-link {
   display: block;
   font-size: 24px; }
+
+.volunteers {
+  margin-bottom: 30px; }
 
 /**
  * Posts
@@ -314,6 +272,19 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.booking {
+  background-color: #ffffff;
+  display: inline-block;
+  position: relative;
+  padding: 5px; }
+  .booking a {
+    color: #D7552D; }
+
+.topics {
+  padding-top: 20px; }
+  .topics span {
+    text-decoration: underline; }
 
 /**
  * Syntax highlighting styles

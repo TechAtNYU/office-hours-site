@@ -4,21 +4,21 @@ layout: default
 
 <div class="home">
   {% include info.html %}
-  <h1 class="page-heading">Volunteers</h1>
+  <h3 class="page-heading">Volunteers</h3>
   <ul>
     {% for volunteer in site.data.volunteers %}
-    <li>
+    <li class="volunteers">
       {% if volunteer.website == 'NA' %}
-        {{ volunteer.name }}
+        <h4>{{volunteer.name}} - </h4>
       {% else %}
-        <a href="{{ volunteer.website }}">
-        {{ volunteer.name }}
-        </a>
+        <h4>
+          <a href="{{ volunteer.website }}">{{volunteer.name}} </a> - 
+        </h4>
       {% endif %}
       {{ volunteer.position }}
       {{ volunteer.about }}
-      can talk about: {{ volunteer.topics }}
-      Book a time <a href="{{ volunteer.calendly }}">here!</a>
+      <p class="topics"><span>Can talk about:</span> {{ volunteer.topics }}.</p>
+      <div class="booking"><a href="{{ volunteer.calendly }}">Book a time here!</a></div>
     </li>
     {% endfor %}
   </ul>
